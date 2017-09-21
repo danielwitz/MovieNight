@@ -16,7 +16,7 @@ namespace MovieNight.Migrations
         //  This method will be called after migrating to the latest version
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(MovieNight.Models.MovieNightDB context)

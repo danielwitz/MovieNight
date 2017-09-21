@@ -129,7 +129,34 @@
                     <p>Copyright &copy; MovieNight</p>
                 </div>
             </div>
-        </footer>
+
+            <style>
+                #map {
+                    height: 300px;
+                    width: 70%;
+                }
+            </style>
+                <div id="map"></div>
+            <div>
+                Contact us : Eli wisel 2, Rishon letzion
+            </div>
+                <script>
+                  function initMap() {
+                      var uluru = { lat: 31.969739, lng: 34.772785 };
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                      zoom: 15,
+                      center: uluru
+                    });
+                    var marker = new google.maps.Marker({
+                      position: uluru,
+                      map: map
+                    });
+                  }
+                </script>
+                <script async defer
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlt_8_ZQeitNc9LH4YOgFyRKnX_f52tDg&callback=initMap">
+                </script>
+</footer>
 
     </div>
     @RenderSection("scripts", required: false)
